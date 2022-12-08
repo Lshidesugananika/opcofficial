@@ -76,6 +76,11 @@ header {
     header, .global-nav {
         width: 100%;
     }
+    header {
+        & .hero a {
+            font-size: 16px;
+        }
+    }
     .global-nav-toggle-label {
         display: block;
 

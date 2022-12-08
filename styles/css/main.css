@@ -34,4 +34,7 @@ h2 {
   *, .content {
     width: 100%;
   }
+  .main {
+    margin-top: 32px;
+  }
 }
