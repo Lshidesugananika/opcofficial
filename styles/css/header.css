@@ -1,0 +1,109 @@
+header {
+  width: 980px;
+  height: 72px;
+}
+header .hero {
+  height: 72px;
+  padding-left: 72px;
+  line-height: 72px;
+  background-image: url("../../images/icons/official_white.png");
+  background-size: 72px;
+  background-repeat: no-repeat;
+}
+header .hero a {
+  font-size: 48px;
+  text-decoration: none;
+}
+
+#global-nav-toggle-checkbox, .global-nav-toggle-label {
+  display: none;
+}
+
+.global-nav {
+  width: 97%;
+  position: sticky;
+  top: 8px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  z-index: 100;
+}
+.global-nav ul {
+  margin: 0 auto;
+  padding: 16px 24px;
+  list-style: none;
+  text-align: center;
+}
+.global-nav ul li {
+  display: inline-block;
+  margin-left: 24px;
+}
+.global-nav ul li a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  border-bottom: 2px solid #ddd;
+  transition: scale 0.3s;
+}
+.global-nav ul li a:hover {
+  scale: 1.1;
+  border-bottom: 2px solid green;
+}
+.global-nav ul li a.current {
+  border-bottom: 2px solid green;
+}
+
+@media screen and (max-width: 980px) {
+  header, .global-nav {
+    width: 100%;
+  }
+  .global-nav-toggle-label {
+    display: block;
+    width: 64px;
+    height: 64px;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 100;
+    border: 1px solid #ddd;
+    border-radius: 32px;
+  }
+  .global-nav-toggle-label__animation-bar {
+    display: block;
+    width: 48px;
+    height: 8px;
+    margin: 10px auto;
+    opacity: 1;
+    background-color: #ddd;
+    transition: transform 1s, opacity 1s;
+    transform-origin: center;
+  }
+  .global-nav {
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 100%;
+    transition: transform 0.5s;
+    z-index: 1;
+  }
+  .global-nav ul li {
+    margin: 12 auto;
+  }
+  .global-nav ul li a {
+    padding: 16px 8px;
+  }
+  #global-nav-toggle-checkbox:checked + .global-nav-toggle-label .global-nav-toggle-label__animation-bar:nth-child(1) {
+    transform: translateY(18px) rotate(225deg);
+  }
+  #global-nav-toggle-checkbox:checked + .global-nav-toggle-label .global-nav-toggle-label__animation-bar:nth-child(2) {
+    opacity: 0;
+  }
+  #global-nav-toggle-checkbox:checked + .global-nav-toggle-label .global-nav-toggle-label__animation-bar:nth-child(3) {
+    transform: translateY(-18px) rotate(315deg);
+  }
+  #global-nav-toggle-checkbox:checked ~ .global-nav {
+    transform: translateX(-110%);
+  }
+}

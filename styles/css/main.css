@@ -1,19 +1,12 @@
-:root {
-  --base-bgcolor: #fff;
-  --content-bgcolor: #fff;
-  --font-base-color: #58534F;
-  --font-sub-color: #80736b;
-  --pc-screen-width: 980px;
-}
-
 * {
-  color: var(--font-base-color);
+  color: #58534F;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background-color: var(--base-bgcolor);
+  background-color: #fff;
   box-sizing: border-box;
 }
 
@@ -24,10 +17,10 @@ h2 {
 }
 
 .content {
-  width: var(--pc-screen-width);
+  width: 980px;
   min-height: 200%;
   margin: 0 auto;
-  background-color: var(--content-bgcolor);
+  background-color: #fff;
 }
 
 .main {
@@ -37,56 +30,8 @@ h2 {
   border-radius: 12px;
 }
 
-.header {
-  width: var(--pc-screen-width);
-  height: 72px;
-  margin: 12px;
-}
-.header .hero {
-  height: 72px;
-  padding-left: 72px;
-  line-height: 72px;
-  background-image: url("../../images/icons/official_white.png");
-  background-size: 72px;
-  background-repeat: no-repeat;
-}
-.header .hero a {
-  font-size: 48px;
-  text-decoration: none;
-}
-
-.global-nav {
-  width: 97%;
-  position: sticky;
-  top: 8px;
-  margin: 0 auto;
-  background-color: var(--base-bgcolor);
-  border: 1px solid #ddd;
-  border-radius: 16px;
-  z-index: 100;
-}
-.global-nav ul {
-  padding-left: 24px;
-  list-style: none;
-}
-.global-nav ul li {
-  display: inline-block;
-}
-.global-nav ul li a {
-  display: block;
-  padding: 8px;
-  margin-left: 24px;
-  text-decoration: none;
-  border-bottom: 2px solid #ddd;
-  transition: scale 0.5s;
-}
-.global-nav ul li a:hover {
-  scale: 1.1;
-  border-bottom: 2px solid green;
-}
-
-@media screen and (max-width: var(--pc-screen-width)) {
-  * {
-    max-width: 100%;
+@media screen and (max-width: 980px) {
+  *, .content {
+    width: 100%;
   }
 }
